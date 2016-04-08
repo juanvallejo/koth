@@ -1,0 +1,23 @@
+{
+  "name": "koth",
+  "version": "1.0.0",
+  "description": "JavaScript API Server",
+  "main": "eval_api.js",
+  "dependencies": {
+    "exec-sync": "^0.1.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanvallejo/koth.git"
+  },
+  "author": "juanvallejo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanvallejo/koth/issues"
+  },
+  "homepage": "https://github.com/juanvallejo/koth"
+}
