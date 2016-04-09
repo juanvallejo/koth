@@ -15,7 +15,7 @@ if(process.argv.length > 2) {
 	PORT = process.argv[2] || PORT;
 }
 
-console.log('Server listening on port', port);
+console.log('Server listening on port', PORT);
 
 var commands = {
 	help: 'Welcome to NotAbackDoor (NABD) API. The purpose of this JavaScript service is to allow remote control of\
