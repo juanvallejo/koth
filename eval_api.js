@@ -24,7 +24,7 @@ var commands = {
 	help: 'Welcome to NotAbackDoor (NABD) API. The purpose of this JavaScript service is to allow remote control of\
 	a server through a safe and secure manner. Use the NABD API to shutdown a remote server, read file logs \
 	and even retrieve public data stored on a machine.\n\n Currently, supported commands are:\n\n \
-	/api/command/read_logfile\n/api/command/read_publickey\n/api/command/help. \nURLs are tricky, sometimes they prefer you use their own "syntax"\n\nPLEASE DO NOT USE ANY OTHER ENDPOINTS. THEY ARE NOT "READY" YET'
+	/api/command/read_logfile\n/api/command/read_publickey\n/api/command/help. \nURLs are tricky, sometimes they prefer you use their own "syntax"\n\nPLEASE DO NOT USE ANY OTHER ENDPOINTS. THEY ARE NOT "READY" YET. (DEFINITELY DO NOT ATTEMPT RANDOM COMMANDS)'
 }
 
 function help() {
