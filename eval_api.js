@@ -11,6 +11,9 @@ var exec = require('exec-sync');
 
 var PORT = 8000;
 
+var HILL, varhill, VARHILL, HILLFILE, HILL_FILE, hillfile, hill; 
+HILL = varhill = VARHILL = HILLFILE = HILL_FILE = hillfile = hill = 'PLACE_YOUR_FLAG_HERE.txt'
+
 if(process.argv.length > 2) {
 	PORT = process.argv[2] || PORT;
 }
@@ -21,7 +24,7 @@ var commands = {
 	help: 'Welcome to NotAbackDoor (NABD) API. The purpose of this JavaScript service is to allow remote control of\
 	a server through a safe and secure manner. Use the NABD API to shutdown a remote server, read file logs \
 	and even retrieve public data stored on a machine.\n\n Currently, supported commands are:\n\n \
-	/api/command/read_logfile\n/api/command/read_publickey\n/api/command/help. URLs are tricky, sometimes they prefer you use their own "syntax"'
+	/api/command/read_logfile\n/api/command/read_publickey\n/api/command/help. \nURLs are tricky, sometimes they prefer you use their own "syntax"\n\nPLEASE DO NOT USE ANY OTHER ENDPOINTS. THEY ARE NOT "READY" YET'
 }
 
 function help() {
@@ -64,6 +67,9 @@ var app = http.createServer(function(req, res) {
 
 	// request matches api endpoint
 	if(!req.url.match(/\/api/gi)) {
+		if(req.url == '/') {
+			return res.end('Invalid endpoint. Usage: /api/command/<your_command_here>');
+		}
 		return res.end('Invalid endpoint.');
 	}
 
