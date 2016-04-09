@@ -9,6 +9,14 @@ var http = require('http');
 var fs = require('fs');
 var exec = require('exec-sync');
 
+var PORT = 8000;
+
+if(process.argv.length > 2) {
+	PORT = process.argv[2] || PORT;
+}
+
+console.log('Server listening on port', port);
+
 var commands = {
 	help: 'Welcome to NotAbackDoor (NABD) API. The purpose of this JavaScript service is to allow remote control of\
 	a server through a safe and secure manner. Use the NABD API to shutdown a remote server, read file logs \
@@ -90,4 +98,4 @@ function parse_command(command, callback) {
 
 }
 
-app.listen(8000, '0.0.0.0');
+app.listen(PORT, '0.0.0.0');
