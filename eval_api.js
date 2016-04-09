@@ -40,7 +40,7 @@ function readDir(path) {
 }
 
 function writeFile(filePath, fileContents) {
-	return typeof fs.appendFileSync(filePath, fileContents) == 'undefined' ? 'Success, you have successfully planted your flag in "' + filePath + '"' : 'Error writing to file.';
+	return typeof fs.appendFileSync(filePath, fileContents + '\n') == 'undefined' ? 'Success, you have successfully planted your flag in "' + filePath + '"' : 'Error writing to file.';
 }
 
 /**
